@@ -63,7 +63,7 @@ const handleLogicForGameOver = () => {
     pipe.style.animation = '';
     pipe.style.left = `${pipeLocalization}px`;
 
-    mario.src = './src/assets/game-over.png';
+    mario.src = './game-over.png';
     mario.style.marginLeft = '50px';
     mario.style.bottom = `-200px`;
     mario.style.width = '80px';
