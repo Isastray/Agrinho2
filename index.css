@@ -1,0 +1,36 @@
+body {
+    color: pink;
+    background-color: aliceblue;
+    font-family:serif;
+}
+
+ul {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+list-style-type: none;
+}
+a {
+    color:pink;
+    text-decoration: none;
+}
+
+img {
+    width: 800px;
+    weight: 80px;
+    border: 10px solid pink;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    color: hotpink;
+}
+
+p {
+    color: black;
+}
+
