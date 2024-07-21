@@ -30,7 +30,7 @@ window.addEventListener('keypress', () => {
     timerScore = setInterval(() => {
       countScore++;
       score.innerHTML = `SCORE ${countScore}`;
-    }, 1000);
+    }, 1500);
 
     timerSpeed = setInterval(() => {
       pipeSpeed -= 0.1;
