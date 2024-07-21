@@ -13,7 +13,7 @@ let timerScore;
 let timerSpeed;
 
 startGameInfo.innerHTML =
-  'Pressione qualquer tecla para iniciar <br/> O tempo é contabilizado a cada segundo';
+  'Pressione qualquer tecla para iniciar <br/> Bom jogo!!!';
 
 reset.addEventListener('click', () => window.location.reload());
 
