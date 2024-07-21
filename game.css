@@ -113,25 +113,25 @@ body {
   animation: clouds-animate 15s infinite linear;
 }
 
-.mario {
+.cavalo {
   position: absolute;
   width: 300px;
   bottom: -8%;
 }
 
 .jump {
-  animation: mario-jump 500ms linear;
+  animation: cavalo-jump 500ms linear;
 }
 
 .dead {
-  animation: mario-dead 1s linear;
+  animation: cavalo-dead 1s linear;
 }
 
-.pipeRun {
-  animation: pipe-animate 1.5s infinite linear;
+.cercaRun {
+  animation: cerca-animate 1.5s infinite linear;
 }
 
-.pipe {
+.cerca {
   position: absolute;
   width: 150px;
   bottom: -4%;
@@ -173,7 +173,7 @@ body {
   }
 }
 
-@keyframes mario-jump {
+@keyframes cavalo-jump {
   0% {
     bottom: 0;
   }
@@ -191,7 +191,7 @@ body {
   }
 }
 
-@keyframes mario-dead {
+@keyframes cavalo-dead {
   0% {
     bottom: 0;
   }
@@ -205,7 +205,7 @@ body {
   }
 }
 
-@keyframes pipe-animate {
+@keyframes cerca-animate {
   from {
     right: -70px;
   }

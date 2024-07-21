@@ -1,6 +1,6 @@
 const score = document.querySelector('.score');
-const mario = document.querySelector('.mario');
-const pipe = document.querySelector('.pipe');
+const cavalo = document.querySelector('.cavalo');
+const cerca = document.querySelector('.cerca');
 const overlay = document.querySelector('.overlay');
 const reset = document.querySelector('.reset');
 const overlayScore = document.querySelector('.overlay-score');
@@ -18,13 +18,13 @@ startGameInfo.innerHTML =
 reset.addEventListener('click', () => window.location.reload());
 
 window.addEventListener('keypress', () => {
-  pipe.classList.add('pipeRun');
-  mario.classList.add('jump');
+  cerca.classList.add('cercaRun');
+  cavalo.classList.add('jump');
 
-  setTimeout(() => mario.classList.remove('jump'), 500);
+  setTimeout(() => cavalo.classList.remove('jump'), 500);
 
   if (startGame) {
-    let pipeSpeed = 1.5;
+    let cercaSpeed = 1.5;
     startGameInfo.innerHTML = '';
     startGameInfo.style.background = 'transparent';
     timerScore = setInterval(() => {
@@ -33,12 +33,12 @@ window.addEventListener('keypress', () => {
     }, 1500);
 
     timerSpeed = setInterval(() => {
-      pipeSpeed -= 0.1;
-      if (pipeSpeed <= 0) {
-        pipeSpeed = 0.6;
+      cercaSpeed -= 0.1;
+      if (cercaSpeed <= 0) {
+        cercaSpeed = 0.6;
       }
-      console.log({ pipeSpeed });
-      pipe.style.animationDelay = `pipe-animate ${pipeSpeed}s infinite linear`;
+      console.log({ cercaSpeed });
+      cerca.style.animationDelay = `cerca-animate ${cercaSpeed}s infinite linear`;
     }, 1000 * 10);
   }
 
@@ -50,24 +50,24 @@ window.addEventListener('keypress', () => {
 });
 
 const handleLogicForGameOver = () => {
-  const pipeLocalization = pipe.offsetLeft;
-  const marioLocalization = +window
-    .getComputedStyle(mario)
+  const cercaLocalization = cerca.offsetLeft;
+  const cavaloLocalization = +window
+    .getComputedStyle(cavalo)
     .bottom.replace('px', '');
 
   if (
-    pipeLocalization <= 120 &&
-    pipeLocalization > 0 &&
-    marioLocalization < 80
+    cercaLocalization <= 120 &&
+    cercaLocalization > 0 &&
+    cavaloLocalization < 80
   ) {
-    pipe.style.animation = '';
-    pipe.style.left = `${pipeLocalization}px`;
+    cerca.style.animation = '';
+    cerca.style.left = `${cercaLocalization}px`;
 
-    mario.src = './game-over.png';
-    mario.style.marginLeft = '50px';
-    mario.style.bottom = `-200px`;
-    mario.style.width = '80px';
-    mario.classList.add('dead');
+    cavalo.src = './game-over.png';
+    cavalo.style.marginLeft = '50px';
+    cavalo.style.bottom = `-200px`;
+    cavalo.style.width = '80px';
+    cavalo.classList.add('dead');
 
     overlayScore.innerHTML = `SCORE ${countScore}`;
     overlay.style.display = 'flex';
