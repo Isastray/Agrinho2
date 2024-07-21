@@ -116,7 +116,7 @@ body {
 .mario {
   position: absolute;
   width: 290px;
-  bottom: 1;
+  bottom: -2;
 }
 
 .jump {
